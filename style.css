@@ -683,39 +683,44 @@ input, textarea, select, button { font-family: inherit; }
   transition: transform 0.5s ease;
 }
 
-/* Gradient placeholder backgrounds (replace with real images) */
+/* Real images via Unsplash (free, no attribution required for UI use) */
+
+/* LAB APEX — Centro de Computação Quântica */
 .gallery-img--1 {
-  background-color: #0a1f0a;
   background-image:
-    radial-gradient(circle at 30% 60%, rgba(0,255,65,0.2) 0%, transparent 60%),
-    linear-gradient(135deg, #0c1a0c 0%, #0a2010 100%);
-}
-.gallery-img--2 {
-  background-color: #0d1f0d;
-  background-image:
-    radial-gradient(circle at 70% 30%, rgba(0,200,50,0.15) 0%, transparent 55%),
-    linear-gradient(135deg, #0c1a0c 0%, #101a10 100%);
-}
-.gallery-img--3 {
-  background-color: #111a11;
-  background-image:
-    radial-gradient(circle at 20% 70%, rgba(0,255,65,0.12) 0%, transparent 50%),
-    linear-gradient(135deg, #111a11 0%, #0c1c0c 100%);
-}
-.gallery-img--4 {
-  background-color: #0a160a;
-  background-image:
-    radial-gradient(circle at 50% 50%, rgba(0,255,65,0.18) 0%, transparent 65%),
-    linear-gradient(135deg, #0a160a 0%, #0e1e0e 100%);
-}
-.gallery-img--5 {
-  background-color: #101810;
-  background-image:
-    radial-gradient(circle at 60% 40%, rgba(0,180,40,0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #101810 0%, #0c1c0c 100%);
+    linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80');
 }
 
-/* Decorative lines inside gallery placeholders */
+/* BIOTECH WING — Síntese de Materiais Vivos */
+.gallery-img--2 {
+  background-image:
+    linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
+    url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80');
+}
+
+/* ROBOTICS FLOOR — Montagem de Exoesqueletos */
+.gallery-img--3 {
+  background-image:
+    linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
+    url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80');
+}
+
+/* DATA CENTER — Infraestrutura de IA Distribuída */
+.gallery-img--4 {
+  background-image:
+    linear-gradient(rgba(5,10,5,0.3), rgba(5,10,5,0.1)),
+    url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80');
+}
+
+/* NANO LAB — Pesquisa em Nanorobótica */
+.gallery-img--5 {
+  background-image:
+    linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
+    url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80');
+}
+
+/* Decorative grid overlay on all gallery images */
 .gallery-img--1::after, .gallery-img--2::after,
 .gallery-img--3::after, .gallery-img--4::after, .gallery-img--5::after {
   content: '';

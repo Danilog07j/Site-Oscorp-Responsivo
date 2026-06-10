@@ -3,7 +3,7 @@
    Fonts: Plus Jakarta Sans + Geist Mono
    ============================================================ */
 
-/* ── VARIABLES ── */
+
 :root {
   --green-vivid: #00ff41;
   --green-mid:   #00c832;
@@ -33,7 +33,7 @@
   --section-pad-y: clamp(4rem, 8vw, 7rem);
 }
 
-/* ── RESET ── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -48,12 +48,12 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 input, textarea, select, button { font-family: inherit; }
 
-/* ── SCROLLBAR ── */
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--black-mid); }
 ::-webkit-scrollbar-thumb { background: var(--green-dim); border-radius: 99px; }
 
-/* ── CONTAINER ── */
+
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -61,7 +61,7 @@ input, textarea, select, button { font-family: inherit; }
   padding-inline: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-/* ── SECTION BASE ── */
+
 .section { padding-block: var(--section-pad-y); }
 .section--dark { background: var(--black-mid); }
 
@@ -100,7 +100,7 @@ input, textarea, select, button { font-family: inherit; }
   margin-bottom: 1.25rem;
 }
 
-/* ── BUTTONS ── */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -144,11 +144,7 @@ input, textarea, select, button { font-family: inherit; }
 .btn--sm { padding: 0.6rem 1.25rem; font-size: 0.82rem; }
 .btn--full { width: 100%; justify-content: center; }
 
-/* ════════════════════════════════════════
-   NAVBAR — CSS-only (checkbox hack + scroll-driven)
-════════════════════════════════════════ */
 
-/* Hide the checkbox visually but keep it in flow for :checked selector */
 .nav-check {
   position: fixed;
   top: 1.1rem;
@@ -167,7 +163,6 @@ input, textarea, select, button { font-family: inherit; }
   z-index: 100;
   padding: 1.25rem 0;
   border-bottom: 1px solid transparent;
-  /* CSS scroll-driven animation for the "scrolled" state */
   animation: navbarScroll linear both;
   animation-timeline: scroll(root block);
   animation-range: 0px 80px;
@@ -251,7 +246,7 @@ input, textarea, select, button { font-family: inherit; }
   box-shadow: 0 0 16px rgba(0,255,65,0.35) !important;
 }
 
-/* ── Hamburger label (CSS-only toggle) ── */
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -270,7 +265,7 @@ input, textarea, select, button { font-family: inherit; }
   transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Animate hamburger → X when checkbox is checked */
+
 .nav-check:checked ~ .navbar .nav-toggle span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -286,9 +281,7 @@ input, textarea, select, button { font-family: inherit; }
   display: none;
 }
 
-/* ════════════════════════════════════════
-   BANNER / HERO
-════════════════════════════════════════ */
+
 .banner {
   position: relative;
   min-height: 100svh;
@@ -297,14 +290,14 @@ input, textarea, select, button { font-family: inherit; }
   overflow: hidden;
   padding-top: 90px;
 
-  /* Desktop image */
+ 
   background-image: url('banner-desktop.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Dark overlay */
+
 .banner::before {
   content: '';
   position: absolute;
@@ -318,7 +311,7 @@ input, textarea, select, button { font-family: inherit; }
   z-index: 1;
 }
 
-/* Scanlines overlay */
+
 .banner-scanlines {
   position: absolute;
   inset: 0;
@@ -333,7 +326,7 @@ input, textarea, select, button { font-family: inherit; }
   pointer-events: none;
 }
 
-/* Grid overlay */
+
 .banner-grid {
   position: absolute;
   inset: 0;
@@ -496,9 +489,7 @@ input, textarea, select, button { font-family: inherit; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ════════════════════════════════════════
-   INTRO
-════════════════════════════════════════ */
+
 .intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -549,9 +540,7 @@ input, textarea, select, button { font-family: inherit; }
   line-height: 1.6;
 }
 
-/* ════════════════════════════════════════
-   PROJECTS
-════════════════════════════════════════ */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -640,9 +629,7 @@ input, textarea, select, button { font-family: inherit; }
 .meta-status--active { color: var(--green-vivid); }
 .meta-status--pending { color: var(--fog); }
 
-/* ════════════════════════════════════════
-   GALLERY
-════════════════════════════════════════ */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -670,44 +657,42 @@ input, textarea, select, button { font-family: inherit; }
   transition: transform 0.5s ease;
 }
 
-/* Real images via Unsplash (free, no attribution required for UI use) */
 
-/* LAB APEX — Centro de Computação Quântica */
 .gallery-img--1 {
   background-image:
     linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
     url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80');
 }
 
-/* BIOTECH WING — Síntese de Materiais Vivos */
+
 .gallery-img--2 {
   background-image:
     linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
     url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80');
 }
 
-/* ROBOTICS FLOOR — Montagem de Exoesqueletos */
+
 .gallery-img--3 {
   background-image:
     linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
     url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80');
 }
 
-/* DATA CENTER — Infraestrutura de IA Distribuída */
+
 .gallery-img--4 {
   background-image:
     linear-gradient(rgba(5,10,5,0.3), rgba(5,10,5,0.1)),
     url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80');
 }
 
-/* NANO LAB — Pesquisa em Nanorobótica */
+
 .gallery-img--5 {
   background-image:
     linear-gradient(rgba(5,10,5,0.35), rgba(5,10,5,0.15)),
     url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80');
 }
 
-/* Decorative grid overlay on all gallery images */
+
 .gallery-img--1::after, .gallery-img--2::after,
 .gallery-img--3::after, .gallery-img--4::after, .gallery-img--5::after {
   content: '';
@@ -749,9 +734,7 @@ input, textarea, select, button { font-family: inherit; }
   color: var(--white);
 }
 
-/* ════════════════════════════════════════
-   CONTACT
-════════════════════════════════════════ */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -852,9 +835,7 @@ input, textarea, select, button { font-family: inherit; }
   box-shadow: 0 0 0 3px rgba(0,255,65,0.1);
 }
 
-/* ════════════════════════════════════════
-   FOOTER
-════════════════════════════════════════ */
+
 .footer {
   background: #030703;
   border-top: 1px solid var(--border);
@@ -923,11 +904,7 @@ input, textarea, select, button { font-family: inherit; }
   color: var(--green-dim);
 }
 
-/* ════════════════════════════════════════
-   MEDIA QUERIES
-════════════════════════════════════════ */
 
-/* ── TABLET (≤ 1024px) ── */
 @media (max-width: 1024px) {
   .banner {
     background-image: url('banner-tablet.jpg');
@@ -976,7 +953,7 @@ input, textarea, select, button { font-family: inherit; }
   .footer-brand { grid-column: 1 / 4; }
 }
 
-/* ── MOBILE (≤ 768px) ── */
+
 @media (max-width: 768px) {
   .banner {
     background-image: url('banner-mobile.jpg');
@@ -1015,10 +992,10 @@ input, textarea, select, button { font-family: inherit; }
 
   .stat-divider { display: none; }
 
-  /* Nav mobile — checkbox hack */
+  
   .nav-toggle { display: flex; }
 
-  /* The checkbox hitbox sits over the hamburger label area */
+ 
   .nav-check {
     top: 1rem;
     right: clamp(1.25rem, 4vw, 2.5rem);
@@ -1032,7 +1009,7 @@ input, textarea, select, button { font-family: inherit; }
     justify-content: center;
     gap: 0.5rem;
     padding: 2rem;
-    /* Hidden by default via clip-path — no JS needed */
+  
     position: fixed;
     inset: 0;
     top: 64px;
@@ -1045,13 +1022,13 @@ input, textarea, select, button { font-family: inherit; }
     transition: clip-path 0.35s cubic-bezier(0.4,0,0.2,1);
   }
 
-  /* Open state triggered by checkbox */
+
   .nav-check:checked ~ .navbar .nav-links {
     clip-path: inset(0 0 0% 0);
     pointer-events: auto;
   }
 
-  /* Close-overlay label fills the screen above the menu — tap it to close */
+
   .nav-close-overlay {
     display: block;
     position: fixed;
@@ -1075,7 +1052,7 @@ input, textarea, select, button { font-family: inherit; }
     text-align: center;
   }
 
-  /* Sections */
+  
   .intro-pillars {
     grid-template-columns: 1fr 1fr;
   }
@@ -1114,7 +1091,7 @@ input, textarea, select, button { font-family: inherit; }
   .footer-brand { grid-column: 1 / 3; }
 }
 
-/* ── SMALL MOBILE (≤ 480px) ── */
+
 @media (max-width: 480px) {
   .intro-pillars { grid-template-columns: 1fr; }
 
@@ -1131,7 +1108,7 @@ input, textarea, select, button { font-family: inherit; }
   .footer-brand { grid-column: 1; }
 }
 
-/* ── REDUCED MOTION ── */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

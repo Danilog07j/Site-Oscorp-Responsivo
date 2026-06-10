@@ -205,29 +205,16 @@ input, textarea, select, button { font-family: inherit; }
   flex-shrink: 0;
 }
 
-.logo-mark {
-  font-size: 1.5rem;
-  color: var(--green-vivid);
-  line-height: 1;
-  filter: drop-shadow(0 0 8px rgba(0,255,65,0.6));
+.logo-svg {
+  height: 36px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 65, 0.35));
+  transition: filter var(--transition);
 }
 
-.logo-text {
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.logo-sub {
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  color: var(--fog);
-  font-weight: 400;
+.nav-logo:hover .logo-svg {
+  filter: drop-shadow(0 0 12px rgba(0, 255, 65, 0.65));
 }
 
 .nav-links {
